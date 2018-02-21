@@ -1,0 +1,76 @@
+funcion limpiar texto 
+http://localhost:5984/_utils/#database/datosfinal/_design/limpiar/_view/textolimpioQuito
+
+#Quito
+
+function(doc){
+	var text = doc.text.toLowerCase();
+	var _httpRegEx = /((www\.[^\s]+)|(https?:\/\/[^s]+))/g
+	var _nameRegEx = /@[^s]+/g
+	var _addespaciosblancos = /[\s]+/g
+	var _hashtag = /#+/g
+	var _quoteEx = /"/g
+	var textolimpio = text
+		.replace(_httpRegEx,'').replace(_nameRegEx,'')
+		.replace(_addespaciosblancos,' ').replace(_hashtag,'')
+		.replace(_quoteEx,'').trim();
+
+	if(textolimpio !==''&& doc.lang == 'es' && doc.place.id =='0177bc687a9ac697'){
+	emit(null,{'text':textolimpio,'ciudad': doc.place.name})
+	}
+		
+
+}
+
+#Guayaquil
+http://localhost:5984/_utils/#database/datosfinal/_design/limpiar/_view/textolimpioGuayaquil
+
+function(doc){
+	var text = doc.text.toLowerCase();
+	var _httpRegEx = /((www\.[^\s]+)|(https?:\/\/[^s]+))/g
+	var _nameRegEx = /@[^s]+/g
+	var _addespaciosblancos = /[\s]+/g
+	var _hashtag = /#+/g
+	var _quoteEx = /"/g
+	var textolimpio = text
+		.replace(_httpRegEx,'').replace(_nameRegEx,'')
+		.replace(_addespaciosblancos,' ').replace(_hashtag,'')
+		.replace(_quoteEx,'').trim();
+
+	if(textolimpio !==''&& doc.lang == 'es' && doc.place.id =='009924a469d7ace1'){
+	emit(null,{'text':textolimpio,'ciudad': doc.place.name})
+	}
+		
+
+}
+
+
+
+
+#Cuenca
+
+http://localhost:5984/_utils/#database/datosfinal/_design/limpiar/_view/textolimpioCuenca
+function(doc){
+	var text = doc.text.toLowerCase();
+	var _httpRegEx = /((www\.[^\s]+)|(https?:\/\/[^s]+))/g
+	var _nameRegEx = /@[^s]+/g
+	var _addespaciosblancos = /[\s]+/g
+	var _hashtag = /#+/g
+	var _quoteEx = /"/g
+	var textolimpio = text
+		.replace(_httpRegEx,'').replace(_nameRegEx,'')
+		.replace(_addespaciosblancos,' ').replace(_hashtag,'')
+		.replace(_quoteEx,'').trim();
+
+	if(textolimpio !==''&& doc.lang == 'es' && doc.place.id =='013cb38e7fe501ae'){
+	emit(null,{'text':textolimpio,'ciudad': doc.place.name})
+	}
+		
+
+}
+
+
+
+
+
+
