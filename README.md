@@ -1,5 +1,5 @@
 # ProyectoBIAnalisisConsultaPopular2018
-Diseño e Implementación de un modelo de consecha,clasificación de sentimientos expresados mediante Twiter,
+Diseño e Implementación de un modelo de consecha,clasificación de sentimientos expresados mediante Twitter,
 utilizando machine learning para la consulta popular del 4 de febrero del 2018.
 # Integrantes
 	* Jefferson Paredes
@@ -13,11 +13,11 @@ utilizando machine learning para la consulta popular del 4 de febrero del 2018.
 	* tweepy V 3.5.0 --> para consumir el API de twitter
 	* TextBlob V 0.15.1 --> para crear un clasificador bayesiano
 
-# Cosecha de twwets
+# Cosecha de tweets
 El script de python /harvester_ecu.py es el encargado de conectarse
-al api de tweeter, y guardar los tweets recolectados en la base datos couchdb
+al api de twitter, y guardar los tweets recolectados en la base datos couchdb
 
-	** importante especificar las credenciales de desarrollador de tweeter en el script.
+	** importante especificar las credenciales de desarrollador de twitter en el script.
 # Procesamiento
 # Limpieza de datos
 - En la base de datos procedemos a generar cada una de las vistas por ciudad y limpieza de los datos
